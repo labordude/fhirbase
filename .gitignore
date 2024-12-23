@@ -5,3 +5,7 @@ vendor
 bin
 *packr.go
 dev/.data
+.env
+.vscode/launch.json
+.vscode/tasks.json
+internal/tui/initprompt.go
