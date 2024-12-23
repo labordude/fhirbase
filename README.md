@@ -26,17 +26,8 @@ Please proceed to the [Getting
 Started](https://fhirbase.aidbox.app/getting-started) tutorial
 for PostgreSQL and Fhirbase installation instructions.
 
-## Usage Statistics
+## Usage Statistics - These have been removed.
 
-Please note that Fhirbase collects anonymous usage statistics. It does
-not send any FHIR data, only events happened (database initialized,
-resources imported and error happened). You can check the [source code
-for stats
-sender](https://github.com/fhirbase/fhirbase/blob/master/stats.go)
-yourself.
-
-You can turn off usage statistics sending with `--nostats` global
-flag.
 
 ## Development
 
