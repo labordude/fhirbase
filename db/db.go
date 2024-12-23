@@ -3,8 +3,8 @@ package db
 import (
 	"context"
 	"fmt"
-	"log"
 	"github.com/jackc/pgx/v5/pgxpool"
+	"log"
 )
 
 // PgConnectionConfig struct stores credentials for PG connection

@@ -9,13 +9,53 @@ GODOC   = godoc
 GOFMT   = gofmt
 
 
-.PHONY: all
-all: lint fmt | $(BASE)
-	$(GO) build \
+.PHONY: darwin
+darwin: lint fmt | $(BASE)
+	GOOS=darwin GOARCH=amd64 $(GO) build \
 	-v \
 	-tags release \
 	-ldflags '-X "main.Version=$(VERSION)" -X "main.BuildDate=$(DATE)"' \
-	-o bin/$(PACKAGE)$(BINSUFFIX) *.go
+	-o bin/$(PACKAGE)-darwin-amd64 *.go
+
+.PHONY: linux
+linux: lint fmt | $(BASE)
+	GOOS=linux GOARCH=amd64 $(GO) build \
+	-v \
+	-tags release \
+	-ldflags '-X "main.Version=$(VERSION)" -X "main.BuildDate=$(DATE)"' \
+	-o bin/$(PACKAGE)-linux-amd64 *.go
+
+.PHONY: windows
+windows: lint fmt | $(BASE)
+	GOOS=windows GOARCH=amd64 $(GO) build \
+	-v \
+	-tags release \
+	-ldflags '-X "main.Version=$(VERSION)" -X "main.BuildDate=$(DATE)"' \
+	-o bin/$(PACKAGE)-windows-amd64.exe *.go
+
+.PHONY: windows-386
+GOOS=windows GOARCH=386 $(GO) build \
+	-v \
+	-tags release \
+	-ldflags '-X "main.Version=$(VERSION)" -X "main.BuildDate=$(DATE)"' \
+	-o bin/$(PACKAGE)-windows-386.exe *.go
+
+.PHONY: linux-386
+linux-386: lint fmt | $(BASE)
+	GOOS=linux GOARCH=386 $(GO) build \
+	-v \
+	-tags release \
+	-ldflags '-X "main.Version=$(VERSION)" -X "main.BuildDate=$(DATE)"' \
+	-o bin/$(PACKAGE)-linux-386 *.go
+
+.PHONY: build-all
+build-all: darwin linux windows linux-386 windows-386
+# all: lint fmt | $(BASE)
+# 	$(GO) build \
+# 	-v \
+# 	-tags release \
+# 	-ldflags '-X "main.Version=$(VERSION)" -X "main.BuildDate=$(DATE)"' \
+# 	-o bin/$(PACKAGE)$(BINSUFFIX) *.go
 
 $(BASE):
 	@mkdir -p $(dir $@)
