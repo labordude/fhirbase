@@ -1,0 +1,13 @@
+.DS_Store
+tests/node_modules
+.gopath
+vendor
+bin
+*packr.go
+dev/.data
+.env
+.travis.yml
+.vscode
+internal/*
+Dockerfile
+fhirbase
