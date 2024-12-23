@@ -1,20 +1,16 @@
 module github.com/labordude/fhirbase
 
-go 1.23.2
+go 1.23
 
 require (
 	github.com/creativeprojects/go-selfupdate v1.4.0
 	github.com/google/uuid v1.6.0
 	github.com/jackc/pgx/v5 v5.7.2
 	github.com/json-iterator/go v1.1.12
+	github.com/k0kubun/go-ansi v0.0.0-20180517002512-3bf9e2903213
 	github.com/schollz/progressbar/v3 v3.17.1
 	github.com/spf13/cobra v1.8.1
 	github.com/spf13/viper v1.19.0
-)
-
-require (
-	github.com/bit101/go-ansi v1.5.4
-	github.com/k0kubun/go-ansi v0.0.0-20180517002512-3bf9e2903213
 )
 
 require (
