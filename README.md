@@ -1,6 +1,17 @@
 # STATUS
-This is an update to fhirbase to fix some errors that were present in the most recent version. This version is not yet ready for production use.
-Specifically, this is targeting the memory segmentation fault that occurred when loading large amounts of data into the database.
+This is an update to fhirbase to fix some errors that were present in the most recent version.
+
+## Fixes:
+-    Segmentation fault error on data load (pointer to db pool could be nil)
+-    Crash on database inititation if it was run again. (added check for _resource type prior to creation)
+
+## Enhancements
+-    Updated to Go 1.23
+-    Updated all dependencies to current versions
+-    Replaced `urfave/cli` with `cobra`
+-    Added `viper` for configuration
+-    Refactored retry function on Bulk downloader to utilize exponential backoff timing based on response headers from FHIR server 
+
 
 # Fhirbase 
 
