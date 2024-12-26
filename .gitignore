@@ -9,3 +9,4 @@ dev/.data
 .vscode/launch.json
 .vscode/tasks.json
 internal/tui/initprompt.go
+fhirbase
