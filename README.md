@@ -6,8 +6,8 @@ recent version.
 ## Fixes:
 
 - Segmentation fault error on data load (pointer to db pool could be nil)
-- Crash on database initiation if it was run again. (added check for \_resource
-  type prior to creation)
+- Crash on database initiatation if it was run again. (added check for
+  \_resource type prior to creation)
 
 ## Enhancements
 
@@ -20,6 +20,8 @@ recent version.
   timing based on response headers from FHIR server
 
 # Fhirbase
+
+[Latest Release on labordude's Github](https://github.com/labordude/fhirbase/releases)
 
 **[Download the Latest Release](https://github.com/fhirbase/fhirbase/releases/)**&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;**[Try Online](https://fbdemo.aidbox.app/)**&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;[Documentation](https://aidbox.gitbook.io/fhirbase/)&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;[Chat](https://chat.fhir.org/#narrow/stream/16-fhirbase)&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;[Google Group](https://groups.google.com/forum/#!forum/fhirbase)
 
