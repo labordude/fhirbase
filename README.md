@@ -6,7 +6,7 @@ recent version.
 ## Fixes:
 
 - Segmentation fault error on data load (pointer to db pool could be nil)
-- Crash on database inititation if it was run again. (added check for \_resource
+- Crash on database initiation if it was run again. (added check for \_resource
   type prior to creation)
 
 ## Enhancements
