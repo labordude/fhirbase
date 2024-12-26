@@ -5,20 +5,12 @@ import (
 	"fmt"
 	"github.com/jackc/pgx/v5/pgxpool"
 	"log"
+	shared "github.com/labordude/fhirbase/shared"
 )
 
-// PgConnectionConfig struct stores credentials for PG connection
-type PgConnectionConfig struct {
-	SSLMode  string
-	Host     string
-	Port     uint64
-	Username string
-	Database string
-	Password string
-}
 
 // PgConnectionConfig holds PG credentials passed from command line
-var PgConfig = PgConnectionConfig{}
+var PgConfig = shared.DatabaseOptions{}
 
 func GetPgxConnectionConfig() (*pgxpool.Config, error) {
 	connStr := fmt.Sprintf("postgres://%s:%s@%s:%d/%s",

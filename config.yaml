@@ -1,0 +1,26 @@
+accept-header: application/fhir+json
+database:
+    db: fhirbase
+    host: localhost
+    password: ""
+    port: 5432
+    sslmode: disable
+    username: postgres
+debug:
+    filepath: debug.log
+    log_messages: false
+display:
+    cursor: '>'
+fhir: 4.0.0
+keys:
+    back: backspace
+    down: down
+    quit: q
+    select: enter
+    toggle: space
+    up: up
+memusage: false
+mode: insert
+numdl: "5"
+webhost: localhost
+webport: "3000"
